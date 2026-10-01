@@ -38,17 +38,21 @@ export default function CaseStudy() {
           </dl>
         </div>
         <div className="wrap">
-          <div className="sshot">
-            <ImageIcon size={40} />
-            <span>Hero shot of the finished work goes here</span>
-          </div>
+          {project.image ? (
+            <img className="sshot-img" src={project.image} alt={`${project.name} — full view`} />
+          ) : (
+            <div className="sshot">
+              <ImageIcon size={40} />
+              <span>Hero shot of the finished work goes here</span>
+            </div>
+          )}
         </div>
       </section>
 
       <section className="sblk">
         <div className="wrap sgrid">
           <div><p className="slabel">The problem</p><h2>What {project.name} was up against</h2></div>
-          <div className="scopy"><p>{project.problem}</p></div>
+          <div className="scopy"><p>{project.problemLong || project.problem}</p></div>
         </div>
       </section>
 
@@ -56,7 +60,7 @@ export default function CaseStudy() {
         <div className="wrap sgrid">
           <div><p className="slabel">The solution</p><h2>What I built</h2></div>
           <div className="scopy">
-            <p>{project.solution}</p>
+            <p>{project.solutionLong || project.solution}</p>
             {project.stack.length > 0 && (
               <div className="sstack">
                 {project.stack.map((t) => <span key={t}>{t}</span>)}

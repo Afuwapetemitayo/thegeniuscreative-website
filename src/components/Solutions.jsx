@@ -49,7 +49,13 @@ export default function Solutions() {
 function SolutionCard({ project, Icon }) {
   return (
     <article className="sol">
-      <div className="thumb"><Icon size={34} /></div>
+      <div className="thumb">
+        {project.image ? (
+          <img src={project.image} alt={`${project.name} screenshot`} />
+        ) : (
+          <Icon size={34} />
+        )}
+      </div>
       <div className="sbody">
         <div className="meta">
           <b>{project.name}</b>

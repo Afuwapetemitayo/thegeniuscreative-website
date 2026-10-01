@@ -156,6 +156,7 @@ h2{font-size:clamp(32px,4.6vw,58px);line-height:1.06;letter-spacing:-.03em;font-
 .sol:hover{transform:translateY(-6px)}
 .sol.hide{display:none}
 .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--soft),hsl(0 0% 90%));display:grid;place-items:center;color:var(--accent)}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .thumb svg{width:34px;height:34px}
 .sbody{padding:24px 26px 26px}
 .meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -324,6 +325,7 @@ footer b{display:block;line-height:1.18;padding-bottom:.06em;overflow:visible;ba
 #story .smeta dt{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 6px}
 #story .smeta dd{margin:0;font-weight:600;font-size:15px}
 #story .sshot{margin-top:clamp(24px,4vw,44px);border-radius:26px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line);aspect-ratio:16/9;background:linear-gradient(135deg,var(--soft),hsl(0 0% 90%));display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--accent);gap:10px}
+#story .sshot-img{display:block;width:100%;margin-top:clamp(24px,4vw,44px);border-radius:26px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line);aspect-ratio:16/9;object-fit:cover;object-position:top center}
 #story .sshot span{font-size:14px;font-weight:600;color:var(--muted)}
 #story .sblk{padding:clamp(40px,6vw,72px) 0;border-top:1px solid var(--line)}
 #story .sgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,64px)}
