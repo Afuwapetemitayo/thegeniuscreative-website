@@ -5,7 +5,7 @@ export default function About() {
   const copyRef = useReveal()
 
   return (
-    <section className="blk" id="about">
+    <section className="blk about" id="about">
       <div className="wrap agrid">
         <div className="aphoto rv" ref={photoRef}>
           <div className="ring" aria-hidden="true" />

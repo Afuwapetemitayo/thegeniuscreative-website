@@ -16,13 +16,13 @@ export default function Home() {
     <main id="top">
       <Hero />
       <Marquee />
+      <About />
       <Problem />
       <Fit />
       <Craft />
       <Solutions />
       <Acquisition />
       <Method />
-      <About />
       <Promise />
       <Journal />
       <Contact />

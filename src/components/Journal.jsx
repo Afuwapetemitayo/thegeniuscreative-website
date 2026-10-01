@@ -1,8 +1,11 @@
 import { ArrowUpRight } from 'lucide-react'
 import useReveal from '../hooks/useReveal.js'
 
-// Swap this once you commit to a platform (Substack, etc.)
-const JOURNAL_URL = '#'
+// One place to control this. Point it at Hashnode for now; when you move to
+// Substack (or wherever), swap the URL and the platform name below — nothing
+// else needs to change.
+const JOURNAL_URL = 'https://PASTE_YOUR_HASHNODE_URL_HERE'
+const JOURNAL_PLATFORM = 'Hashnode'
 
 export default function Journal() {
   const ref = useReveal()
@@ -15,7 +18,7 @@ export default function Journal() {
             <h2>Thinking out loud on brands, design, and building for the web.</h2>
           </div>
           <a className="btn" href={JOURNAL_URL} target="_blank" rel="noopener noreferrer">
-            Read the Journal <ArrowUpRight size={18} />
+            Read on {JOURNAL_PLATFORM} <ArrowUpRight size={18} />
           </a>
         </div>
       </div>
