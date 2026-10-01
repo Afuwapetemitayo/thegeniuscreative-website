@@ -344,6 +344,8 @@ footer b{display:block;line-height:1.18;padding-bottom:.06em;overflow:visible;ba
 #story .sresult h2{color:#fff;max-width:22ch;position:relative}
 #story .sresult blockquote{margin:18px 0 0;font-size:18px;line-height:1.6;color:hsl(0 0% 100% / .88);max-width:52ch;position:relative}
 #story .sresult cite{display:block;margin-top:12px;font-style:normal;font-weight:600;font-size:15px;color:hsl(0 0% 100% / .7)}
+#story .sliveLink{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:12px 20px;border-radius:999px;background:#fff;color:var(--ink);font-weight:600;font-size:15px;position:relative;transition:transform .25s var(--ease),background .2s}
+#story .sliveLink:hover{background:hsl(0 0% 92%);transform:translateY(-2px)}
 #story .snext{padding:clamp(48px,8vw,90px) 0;text-align:center}
 #story .snext .slabel{justify-content:center}
 #story .snext a{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-top:12px}

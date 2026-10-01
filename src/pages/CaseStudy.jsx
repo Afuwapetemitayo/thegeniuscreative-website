@@ -81,6 +81,11 @@ export default function CaseStudy() {
                 <cite>{project.quoteAuthor}</cite>
               </blockquote>
             )}
+            {project.liveUrl && (
+              <a className="sliveLink" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                Visit the live site <ArrowRight size={18} />
+              </a>
+            )}
           </div>
         </div>
       </section>
