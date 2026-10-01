@@ -6,7 +6,7 @@ const projects = [
     slug: 'ampliqhq',
     name: 'AmpliQ',
     kind: 'Development',
-    image: null,
+    image: '/images/ampliqhq.jpg',
     problem: 'AmpliQ needed a home before it had a product: somewhere for freelancers and creatives across Africa to actually understand what AmpliQ is, and a fast way to capture a waitlist of the people who wanted in first.',
     problemLong: "AmpliQ was still pre-launch — the product itself wasn't built yet, but the audience needed somewhere to land. There was no site explaining what AmpliQ actually does, and no structured way to capture who wanted early access. Without that, every bit of early interest from freelancers and creatives across Africa had nowhere to go and no way to be qualified before launch day.",
     solution: "A landing site at ampliqhq.com that explains AmpliQ, paired with a two-step waitlist form: a quick name-and-email capture up front, then an optional ~20-question form for people who want to go deeper. Submissions route straight to the team's inbox through Zoho SMTP, deployed on Vercel.",
@@ -17,22 +17,6 @@ const projects = [
     timeline: 'Ongoing',
     tools: 'React, Vercel, Zoho SMTP',
     stack: ['React', 'Vercel', 'Zoho SMTP'],
-    quote: '',
-    quoteAuthor: ''
-  },
-  {
-    slug: 'ampliqhq',
-    name: 'Ampliqhq',
-    kind: 'Development',
-    image: null, // drop a screenshot at /public/images/projects/ampliqhq.jpg and set this to '/images/projects/ampliqhq.jpg'
-    problem: 'AmpliQ needed a waitlist site before it had a product to point to — which meant the site had to earn trust and explain what AmpliQ actually is, not just collect emails.',
-    solution: 'Built and shipped ampliqhq.com: a landing page that explains the platform, paired with a two-step signup — a fast name-and-email capture up front, then a full qualifying form for people who want to share more.',
-    result: 'A live waitlist that converts curious visitors into signups, with every submission — quick or detailed — landing straight in the inbox in real time.',
-    client: 'AmpliQ',
-    role: 'Full-stack web development',
-    timeline: 'Ongoing',
-    tools: 'React, Vite, Zoho SMTP',
-    stack: ['React', 'Vite', 'Zoho SMTP'],
     quote: '',
     quoteAuthor: ''
   },
@@ -53,18 +37,20 @@ const projects = [
     quoteAuthor: ''
   },
   {
-    slug: 'project-four',
-    name: '[Brand name]',
+    slug: 'hilann-logistics',
+    name: 'Hilann Logistics',
     kind: 'Development',
-    image: null,
-    problem: '[One or two lines on the problem]',
-    solution: '[What you built]',
-    result: '[Outcome, number, or client quote]',
-    client: '[Client / brand name]',
-    role: '[e.g. Full-stack web development]',
-    timeline: '[e.g. 4 weeks]',
-    tools: '[e.g. React, Express, Supabase]',
-    stack: ['React', 'Express', 'Supabase'],
+    image: null, // drop hilann-logistics.jpg in /public/images and point this at '/images/hilann-logistics.jpg'
+    problem: "Hilann Logistics needed a working site — frontend and backend — built around a logistics brand's own look, not a generic template.",
+    problemLong: "This was a freelance build where the brand already had its own visual identity: a dark, zinc-and-red system suited to a logistics company. The job wasn't just to ship pages — it was a full frontend and backend, with a real way for the site to send and handle mail, on infrastructure that could stay live and be trusted with credentials.",
+    solution: "A React and Tailwind frontend built around Hilann's dark zinc/red system, backed by a Node.js API handling mail through Nodemailer, deployed on Railway.",
+    solutionLong: "I built the frontend in React with Tailwind, styled entirely around Hilann's own dark zinc-and-red palette rather than a generic template look. Behind it sits a Node.js and Express backend handling the site's mail through Nodemailer, deployed on Railway so it runs independently of the frontend. Partway through, an exposed .env file meant rotating every credential and scrubbing the Git history before redeploying — the kind of real-world incident that doesn't show up in a portfolio screenshot but is exactly the kind of thing a client should know gets handled properly.",
+    result: 'A live frontend and backend running on separate, production infrastructure — React on the client side, Express and Nodemailer on Railway behind it.',
+    client: 'Hilann Logistics',
+    role: 'Full-stack web development — frontend & backend',
+    timeline: 'Freelance project',
+    tools: 'React, Tailwind, Node.js, Express, Nodemailer, Railway',
+    stack: ['React', 'Tailwind', 'Node.js', 'Express', 'Railway'],
     quote: '',
     quoteAuthor: ''
   }
