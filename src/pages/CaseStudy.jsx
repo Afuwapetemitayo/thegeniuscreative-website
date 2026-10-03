@@ -89,7 +89,8 @@ export default function CaseStudy() {
         <section className="sblk">
           <div className="wrap">
             <p className="slabel">The work</p>
-            <h2 style={{ marginBottom: 28 }}>A closer look</h2>
+            <h2 style={{ marginBottom: 10 }}>A closer look</h2>
+            <p className="shint">Scroll to see the full set →</p>
             <div className="sgallery">
               {project.gallery.map((src, i) => (
                 <img key={src} src={src} alt={`${project.name} — design ${i + 1}`} loading="lazy" />

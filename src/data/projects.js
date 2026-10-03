@@ -46,9 +46,12 @@ const projects = [
     kind: 'Design',
     image: '/images/stacko/stacko-autosave.jpg',
     gallery: [
+      '/images/stacko/stacko-cover.jpg',
       '/images/stacko/stacko-money-habits.jpg',
       '/images/stacko/stacko-milestone.jpg',
-      '/images/stacko/stacko-start-saving.jpg'
+      '/images/stacko/stacko-start-saving.jpg',
+      '/images/stacko/stacko-brand-info.jpg',
+      '/images/stacko/stacko-solution-notes.jpg'
     ],
     problem: "Stacko is a fintech savings app for young Africans, and standard banking visuals — rigid dashboards, clinical charts — made saving money feel like a chore instead of something aspirational.",
     problemLong: "Stacko needed social content that could sell a savings habit to a younger audience who already find traditional financial institutions and banking apps rigid, complex, and uninspiring. The brief wasn't just \"make posts\" — it was to strip away the clinical anxiety that finance content usually carries, and move people from passively interested in saving to actively building wealth. That meant the visuals had to do real work: make automated saving and consistent tracking look aspirational, secure, and elite, not like homework.",
