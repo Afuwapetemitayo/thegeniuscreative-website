@@ -338,14 +338,22 @@ footer b{display:block;line-height:1.18;padding-bottom:.06em;overflow:visible;ba
 #story .scopy li{margin-bottom:8px}
 #story .sstack{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 #story .sstack span{padding:7px 15px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:14px;font-weight:600}
-#story .sresult{border-radius:26px;padding:clamp(28px,5vw,48px);background:linear-gradient(135deg,var(--near-black),#000);color:#fff;position:relative;overflow:hidden}
+#story .sgallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+#story .sgallery img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;aspect-ratio:4/5}
+@media (max-width:640px){#story .sgallery{grid-template-columns:1fr}}
+#story .sresult{display:flex;align-items:center;justify-content:space-between;gap:clamp(28px,6vw,64px);border-radius:26px;padding:clamp(28px,5vw,48px);background:linear-gradient(135deg,var(--near-black),#000);color:#fff;position:relative;overflow:hidden}
 #story .sresult::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:hsl(var(--hue) 55% 40% / .4);filter:blur(20px)}
+#story .sresultText{position:relative}
 #story .sresult .slabel{color:hsl(var(--hue) 100% 82%)}
 #story .sresult h2{color:#fff;max-width:22ch;position:relative}
 #story .sresult blockquote{margin:18px 0 0;font-size:18px;line-height:1.6;color:hsl(0 0% 100% / .88);max-width:52ch;position:relative}
 #story .sresult cite{display:block;margin-top:12px;font-style:normal;font-weight:600;font-size:15px;color:hsl(0 0% 100% / .7)}
-#story .sliveLink{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:12px 20px;border-radius:999px;background:#fff;color:var(--ink);font-weight:600;font-size:15px;position:relative;transition:transform .25s var(--ease),background .2s}
+#story .sliveLink{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;margin:0 auto;padding:12px 20px;border-radius:999px;background:#fff;color:var(--ink);font-weight:600;font-size:15px;position:relative;transition:transform .25s var(--ease),background .2s;white-space:nowrap}
 #story .sliveLink:hover{background:hsl(0 0% 92%);transform:translateY(-2px)}
+@media (max-width:760px){
+  #story .sresult{flex-direction:column;align-items:flex-start}
+  #story .sliveLink{align-self:center;margin-top:8px}
+}
 #story .snext{padding:clamp(48px,8vw,90px) 0;text-align:center}
 #story .snext .slabel{justify-content:center}
 #story .snext a{display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-top:12px}

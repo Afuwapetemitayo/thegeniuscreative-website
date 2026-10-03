@@ -51,7 +51,9 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: 'New brief from Thegeniuscreative.com',
+          subject: `New brief: ${fields.type} — ${fields.name}`,
+          from_name: 'Thegeniuscreative website',
+          replyto: fields.contact,
           ...fields
         })
       })

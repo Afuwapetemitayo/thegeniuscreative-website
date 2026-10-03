@@ -3,11 +3,26 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Image as ImageIcon } from 'lucide-react'
 import projects from '../data/projects.js'
 
+// A few entries in projects.js are still placeholders waiting for real work
+// to replace them (name wrapped in brackets, e.g. "[Brand name]"). "Next up"
+// should only ever point at a real, finished project.
+const isPlaceholder = (p) => p.name.trim().startsWith('[')
+
 export default function CaseStudy() {
   const { slug } = useParams()
   const index = projects.findIndex((p) => p.slug === slug)
   const project = projects[index]
-  const next = projects[(index + 1) % projects.length]
+
+  // Walk forward through the list looking for the next real project. If it
+  // wraps all the way back around to this one, there's nothing else to show.
+  let next = null
+  if (index !== -1) {
+    for (let i = 1; i <= projects.length; i++) {
+      const candidate = projects[(index + i) % projects.length]
+      if (candidate.slug === slug) break
+      if (!isPlaceholder(candidate)) { next = candidate; break }
+    }
+  }
 
   useEffect(() => { window.scrollTo(0, 0) }, [slug])
 
@@ -70,17 +85,33 @@ export default function CaseStudy() {
         </div>
       </section>
 
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="sblk">
+          <div className="wrap">
+            <p className="slabel">The work</p>
+            <h2 style={{ marginBottom: 28 }}>A closer look</h2>
+            <div className="sgallery">
+              {project.gallery.map((src, i) => (
+                <img key={src} src={src} alt={`${project.name} — design ${i + 1}`} loading="lazy" />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="sblk">
         <div className="wrap">
           <div className="sresult">
-            <p className="slabel">The result</p>
-            <h2>{project.result}</h2>
-            {project.quote && (
-              <blockquote>
-                "{project.quote}"
-                <cite>{project.quoteAuthor}</cite>
-              </blockquote>
-            )}
+            <div className="sresultText">
+              <p className="slabel">The result</p>
+              <h2>{project.result}</h2>
+              {project.quote && (
+                <blockquote>
+                  "{project.quote}"
+                  <cite>{project.quoteAuthor}</cite>
+                </blockquote>
+              )}
+            </div>
             {project.liveUrl && (
               <a className="sliveLink" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 Visit the live site <ArrowRight size={18} />
@@ -93,9 +124,15 @@ export default function CaseStudy() {
       <section className="snext">
         <div className="wrap">
           <p className="slabel">Next up</p>
-          <Link to={`/solutions/${next.slug}`}>
-            <h2>{next.name} <ArrowRight size={22} style={{ display: 'inline' }} /></h2>
-          </Link>
+          {next ? (
+            <Link to={`/solutions/${next.slug}`}>
+              <h2>{next.name} <ArrowRight size={22} style={{ display: 'inline' }} /></h2>
+            </Link>
+          ) : (
+            <Link to="/#solutions">
+              <h2>Back to Solutions <ArrowRight size={22} style={{ display: 'inline' }} /></h2>
+            </Link>
+          )}
         </div>
       </section>
     </main>

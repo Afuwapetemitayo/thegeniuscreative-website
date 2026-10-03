@@ -47,13 +47,13 @@ export default function Header() {
         </button>
         <nav id="mainnav" aria-label="Main" className={open ? 'open' : ''}>
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={linkHref(l.href)} onClick={() => setOpen(false)}>
+            <Link key={l.href} to={linkHref(l.href)} onClick={() => setOpen(false)}>
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a className="btn" href={linkHref('#build')} onClick={() => setOpen(false)}>
+          <Link className="btn" to={linkHref('#build')} onClick={() => setOpen(false)}>
             Let's Create
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

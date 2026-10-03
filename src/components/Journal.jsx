@@ -4,7 +4,7 @@ import useReveal from '../hooks/useReveal.js'
 // One place to control this. Point it at Hashnode for now; when you move to
 // Substack (or wherever), swap the URL and the platform name below — nothing
 // else needs to change.
-const JOURNAL_URL = 'https://PASTE_YOUR_HASHNODE_URL_HERE'
+const JOURNAL_URL = 'https://thegeniuscreative.hashnode.dev/i-built-boundrix-for-nigerian-freelancers'
 const JOURNAL_PLATFORM = 'Hashnode'
 
 export default function Journal() {
