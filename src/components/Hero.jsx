@@ -42,7 +42,7 @@ export default function Hero() {
               See the solutions <ArrowUpRight size={18} />
             </a>
             <a className="btn ghost" href="#build">
-              Let's Create <MessageCircle size={18} />
+              Let's build yours <MessageCircle size={18} />
             </a>
           </div>
         </div>
