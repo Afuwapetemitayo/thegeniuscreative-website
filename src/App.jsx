@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import Seo from './components/Seo.jsx'
 import Home from './pages/Home.jsx'
 import CaseStudy from './pages/CaseStudy.jsx'
 
 export default function App() {
   return (
     <>
+      <Seo />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

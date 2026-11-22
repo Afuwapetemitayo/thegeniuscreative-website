@@ -1,9 +1,12 @@
 // One entry here = one Solutions card + one auto-generated /solutions/:slug page.
 // Replace these placeholders with your real projects, then add more as you like.
+// ogImage is optional: if a project doesn't have one, its main image is used
+// for link previews instead.
 
 const projects = [
   {
     slug: 'ampliqhq',
+    ogImage: '/og/ampliqhq.jpg', // 1200x630 picture shown when the link is shared
     name: 'AmpliQ',
     kind: 'Development',
     image: '/images/ampliqhq.jpg',
@@ -23,6 +26,7 @@ const projects = [
   },
   {
     slug: 'boundrix',
+    ogImage: '/og/boundrix.jpg', // 1200x630 picture shown when the link is shared
     name: 'Boundrix',
     kind: 'Development',
     image: '/images/boundrix.jpg',
@@ -42,6 +46,7 @@ const projects = [
   },
   {
     slug: 'stacko',
+    ogImage: '/og/stacko.jpg', // 1200x630 picture shown when the link is shared
     name: 'STACKO',
     kind: 'Design',
     image: '/images/stacko/stacko-autosave.jpg',
@@ -69,6 +74,7 @@ const projects = [
   },
   {
     slug: 'hilann-logistics',
+    ogImage: '/og/hilann-logistics.jpg', // 1200x630 picture shown when the link is shared
     name: 'Hilann Logistics',
     kind: 'Development',
     image: null, // drop hilann-logistics.jpg in /public/images and point this at '/images/hilann-logistics.jpg'

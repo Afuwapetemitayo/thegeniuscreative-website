@@ -51,7 +51,7 @@ function SolutionCard({ project, Icon }) {
     <article className="sol">
       <div className="thumb">
         {project.image ? (
-          <img src={project.image} alt={`${project.name} screenshot`} />
+          <img src={project.image} alt={`${project.name} — ${project.kind === 'Design' ? 'brand and social media design' : 'website'} by Thegeniuscreative`} />
         ) : (
           <Icon size={34} />
         )}

@@ -9,7 +9,7 @@ export default function About() {
       <div className="wrap agrid">
         <div className="aphoto rv" ref={photoRef}>
           <div className="ring" aria-hidden="true" />
-          <img src="/images/temitayo.jpg" alt="Temitayo, the creative behind Thegeniuscreative" />
+          <img src="/images/temitayo.jpg" alt="Afuwape Temitayo, brand designer and web developer behind Thegeniuscreative" />
         </div>
         <div className="acopy rv" ref={copyRef}>
           <p className="label">The person behind it</p>

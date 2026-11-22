@@ -54,7 +54,7 @@ export default function CaseStudy() {
         </div>
         <div className="wrap">
           {project.image ? (
-            <img className="sshot-img" src={project.image} alt={`${project.name} — full view`} />
+            <img className="sshot-img" src={project.image} alt={`${project.name} — ${project.kind === 'Design' ? 'brand and social media design' : 'website'} by Thegeniuscreative`} />
           ) : (
             <div className="sshot">
               <ImageIcon size={40} />

@@ -22,3 +22,13 @@ and swap it in.
 Each project lives in src/data/projects.js. Add a new object there and it
 automatically gets a Solutions card and its own /solutions/:slug page —
 no new component needed.
+
+## SEO
+- `src/seo.js` holds every title, description, share image and the structured
+  data Google reads. **When you buy a domain, set `CUSTOM_DOMAIN` at the top of
+  that file.** Until then the build uses the Vercel production address.
+- `npm run build` pre-renders `/` and every case study to real HTML (with its
+  own title and share tags), then writes `sitemap.xml` and `robots.txt`.
+- New project in `projects.js` → it's automatically added to the sitemap and
+  pre-rendered. Give it an `ogImage` (1200×630) for a nicer link preview;
+  otherwise its main image is used.
