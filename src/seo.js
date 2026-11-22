@@ -6,11 +6,10 @@ import projects from './data/projects.js'
 
 // ---------------------------------------------------------------------------
 // THE ONE LINE TO CHANGE WHEN YOU BUY A DOMAIN
-// Leave it empty and the build uses the site's Vercel production address
-// automatically. Once you have a domain, put it here, e.g.
-// 'https://thegeniuscreative.com' (no trailing slash).
+// Right now it's your Vercel address. Once you buy a domain, swap it in,
+// e.g. 'https://thegeniuscreative.com' (no trailing slash).
 // ---------------------------------------------------------------------------
-const CUSTOM_DOMAIN = ''
+const CUSTOM_DOMAIN = 'https://thegeniuscreative.vercel.app'
 
 export const SITE_URL = (() => {
   if (CUSTOM_DOMAIN) return CUSTOM_DOMAIN.replace(/\/$/, '')
@@ -33,7 +32,7 @@ export const SITE = {
   title: 'Brand Designer & Web Developer in Lagos | Thegeniuscreative',
   // ~150-160 characters
   description:
-    'Afuwape Temitayo (Thegeniuscreative) is a Lagos-based brand identity designer and full-stack web developer helping startups and brands get remembered, trusted and chosen.',
+    'Afuwape Temitayo (Thegeniuscreative) is a Lagos-based visual strategist, brand designer and full-stack developer helping startups and brands get remembered and chosen.',
   socials: [
     'https://x.com/thegeniuscr',
     'https://www.instagram.com/thegeniuscreative.ng/',
@@ -48,7 +47,8 @@ export const SITE = {
     'Frontend development',
     'Full-stack web development',
     'React',
-    'Brand strategy'
+    'Brand strategy',
+    'Visual strategy'
   ]
 }
 
@@ -74,7 +74,7 @@ const personLd = {
   alternateName: ['Temitayo Afuwape', 'Thegeniuscreative', 'Temmytee'],
   url: `${SITE_URL}/`,
   image: abs('/images/temitayo.jpg'),
-  jobTitle: 'Brand Designer & Full-Stack Web Developer',
+  jobTitle: 'Visual Strategist, Brand Designer & Full-Stack Digital Developer',
   description: SITE.description,
   email: `mailto:${SITE.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'Lagos', addressCountry: 'NG' },
@@ -100,6 +100,29 @@ const businessLd = {
   serviceType: ['Brand identity design', 'Social media design', 'Website design and development'],
   sameAs: SITE.socials
 }
+
+// Products you created, so Google connects them back to you
+const productsLd = [
+  {
+    '@type': 'SoftwareApplication',
+    name: 'Boundrix',
+    url: 'https://boundrix.vercel.app',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description: 'AI-powered scope management tool that protects African freelancers from scope creep.',
+    creator: { '@id': `${SITE_URL}/#person` }
+  },
+  {
+    '@type': 'SoftwareApplication',
+    name: 'Compass OOU',
+    alternateName: 'OOU campus map',
+    url: 'https://compass-oou.vercel.app',
+    applicationCategory: 'TravelApplication',
+    operatingSystem: 'Web',
+    description: 'Campus map and navigation app for Olabisi Onabanjo University (OOU), Ago-Iwoye.',
+    creator: { '@id': `${SITE_URL}/#person` }
+  }
+]
 
 const websiteLd = {
   '@type': 'WebSite',
@@ -167,7 +190,7 @@ export function headFor(pathname) {
     image: abs(SITE.image),
     imageAlt: `${SITE.name} — brand design and web development by ${SITE.person}`,
     type: 'website',
-    jsonLd: { '@context': 'https://schema.org', '@graph': [websiteLd, personLd, businessLd] }
+    jsonLd: { '@context': 'https://schema.org', '@graph': [websiteLd, personLd, businessLd, ...productsLd] }
   }
 }
 
