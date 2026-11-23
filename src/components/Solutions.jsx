@@ -1,8 +1,13 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Palette, LayoutTemplate, Megaphone, Code, ArrowRight } from 'lucide-react'
 import useReveal from '../hooks/useReveal.js'
 import projects from '../data/projects.js'
+
+const canTilt = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const ICONS = [Palette, LayoutTemplate, Megaphone, Code]
 const FILTERS = ['All', 'Design', 'Development']
@@ -47,8 +52,31 @@ export default function Solutions() {
 }
 
 function SolutionCard({ project, Icon }) {
+  const ref = useRef(null)
+
+  function onMouseMove(e) {
+    const card = ref.current
+    if (!card || !canTilt()) return
+    const rect = card.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const px = (x / rect.width) * 100
+    const py = (y / rect.height) * 100
+    const rotateX = (0.5 - y / rect.height) * 7
+    const rotateY = (x / rect.width - 0.5) * 9
+    card.style.setProperty('--mx', `${px}%`)
+    card.style.setProperty('--my', `${py}%`)
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`
+  }
+
+  function onMouseLeave() {
+    const card = ref.current
+    if (!card) return
+    card.style.transform = ''
+  }
+
   return (
-    <article className="sol">
+    <article className="sol" ref={ref} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
       <div className="thumb">
         {project.image ? (
           <img src={project.image} alt={`${project.name} — ${project.kind === 'Design' ? 'brand and social media design' : 'website'} by Thegeniuscreative`} />

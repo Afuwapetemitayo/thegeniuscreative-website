@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, MessageCircle } from 'lucide-react'
 
 const WORDS = ['remembered', 'trusted', 'chosen', 'paid']
@@ -6,6 +6,7 @@ const WORDS = ['remembered', 'trusted', 'chosen', 'paid']
 export default function Hero() {
   const [i, setI] = useState(0)
   const [out, setOut] = useState(false)
+  const sectionRef = useRef(null)
 
   useEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -20,8 +21,25 @@ export default function Hero() {
     return () => clearInterval(id)
   }, [])
 
+  // Cursor-following glow — desktop pointer devices only, and skipped
+  // entirely for anyone who's asked for reduced motion.
+  useEffect(() => {
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const el = sectionRef.current
+    if (!el || !canHover || reduce) return
+    const onMove = (e) => {
+      const rect = el.getBoundingClientRect()
+      el.style.setProperty('--mx', `${e.clientX - rect.left}px`)
+      el.style.setProperty('--my', `${e.clientY - rect.top}px`)
+    }
+    el.addEventListener('mousemove', onMove)
+    return () => el.removeEventListener('mousemove', onMove)
+  }, [])
+
   return (
-    <section className="hero">
+    <section className="hero" ref={sectionRef}>
+      <i className="cursorGlow" aria-hidden="true" />
       <i className="orb o1" aria-hidden="true" />
       <i className="orb o2" aria-hidden="true" />
       <i className="orb o3" aria-hidden="true" />
