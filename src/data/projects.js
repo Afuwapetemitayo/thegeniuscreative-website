@@ -45,6 +45,45 @@ const projects = [
     quoteAuthor: ''
   },
   {
+    slug: 'compass-oou',
+    name: 'Compass OOU',
+    kind: 'Development',
+    image: null, // add compass-oou.jpg to /public/images and point this at '/images/compass-oou.jpg'
+    problem: "A university campus is hard to read when you're new to it. Students and visitors at Olabisi Onabanjo University needed a quick way to find where they were going, without asking around.",
+    problemLong: "Olabisi Onabanjo University is a large campus, and anyone new to it, whether a fresh student, a visitor or someone arriving for an exam, ends up asking strangers for directions. There was no simple, dedicated map built around the way OOU students actually move around campus.",
+    solution: "Compass OOU: a campus map and navigation web app for OOU, Ago-Iwoye, that works from your phone's browser, with nothing to install.",
+    solutionLong: "I built Compass OOU as my own product: a campus map and navigation app made specifically for Olabisi Onabanjo University. It runs in the browser, so students and visitors can open it on any phone and find their way around campus, and it's live at compass-oou.vercel.app.",
+    result: 'A live campus map for OOU, built and launched as my own product.',
+    liveUrl: 'https://compass-oou.vercel.app',
+    client: 'Compass OOU (own product)',
+    role: 'Product design & web development',
+    timeline: 'Live',
+    tools: 'Web app, Vercel',
+    stack: [],
+    quote: '',
+    quoteAuthor: ''
+  },
+  {
+    slug: 'sendgiwa',
+    ogImage: '/og/sendgiwa.jpg', // 1200x630 picture shown when the link is shared
+    name: 'SendGiwa',
+    kind: 'Development',
+    image: '/images/sendgiwa.jpg',
+    problem: "SendGiwa runs food orders, market runs and errands around Ago-Iwoye, but every order went through WhatsApp, where customers haggled over delivery fees and nothing was tracked.",
+    problemLong: "SendGiwa already had customers: students and residents around Ago-Iwoye, Ajegunle and the OOU area ordering food, market items and errands. But the whole thing lived in WhatsApp. Delivery fees got negotiated message by message, orders were easy to lose, and the owner had no single place to see who had paid, which vendors were genuine, or what was being delivered.",
+    solution: "A full web app that moves everything off WhatsApp: customers register, order from restaurants or the market, pay by bank transfer with a remark code, and chat with their runner. An admin dashboard confirms payments, verifies vendors and sets delivery fees by route.",
+    solutionLong: "I designed SendGiwa's web app from the first screen to the last email. Customers sign up once and their cart is saved to their account. Delivery fees follow the route and are set by the admin, so they are shown at checkout instead of being haggled over. Payment is a bank transfer matched by a remark code that the admin confirms, and a built-in chat lets the runner tell a customer when an item is unavailable or a price changes. Vendors apply, get verified by the admin, then manage their own products and prices. The design covers the landing page, the customer app, the vendor and admin dashboards, and the full set of transactional emails.",
+    result: 'A complete UI design for the whole SendGiwa web app, ready to build.',
+    liveUrl: '',
+    client: 'SendGiwa',
+    role: 'UI/UX design & web app development',
+    timeline: 'In progress',
+    tools: 'Figma',
+    stack: [],
+    quote: '',
+    quoteAuthor: ''
+  },
+  {
     slug: 'stacko',
     ogImage: '/og/stacko.jpg', // 1200x630 picture shown when the link is shared
     name: 'STACKO',
