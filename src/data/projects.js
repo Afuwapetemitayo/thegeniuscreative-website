@@ -45,20 +45,21 @@ const projects = [
     quoteAuthor: ''
   },
   {
-    slug: 'mailway',
-    name: 'Mailway',
+    slug: 'nelway',
+    ogImage: '/og/nelway.jpg', // 1200x630 picture shown when the link is shared
+    name: 'Nelway',
     kind: 'Development',
-    image: null, // add mailway.jpg to /public/images and point this at '/images/mailway.jpg'
+    image: '/images/nelway.jpg',
     problem: "Finding a job means juggling too many separate tools: one for the CV, another for job boards, another for cover letters, interview practice and tracking applications. Students, graduates and working professionals end up disorganised and unsure how to improve their chances.",
     problemLong: "For students, recent graduates, job seekers and working professionals, the job market is scattered. The CV lives in one place, the job search in another, cover letters get rewritten from scratch every time, and applications are tracked in a notes app or not at all. There was no single, organised place to take control of a career and make smarter moves.",
-    solution: "Mailway: an AI-powered career management platform that puts the essential career tools in one place. Create and improve your CV, explore opportunities, find roles that match your skills, prepare tailored applications and cover letters, practise for interviews and track every application.",
-    solutionLong: "Mailway is an AI-powered career management platform built to help people take control of their professional journeys. It brings the tools people need into one place: users can create and improve CVs, explore job opportunities, find roles that match their skills, prepare tailored applications and cover letters, practise for interviews and track their job applications. The goal is simple: make navigating the job market easier, more organised and more effective.",
-    result: 'An AI-powered career platform that puts CVs, job matching, applications, interview practice and tracking in one place.',
+    solution: "Nelway: an AI-powered career management platform that puts the essential career tools in one place. Create and improve your CV, explore opportunities, find roles that match your skills, prepare tailored applications and cover letters, practise for interviews and track every application.",
+    solutionLong: "Nelway is an AI-powered career management platform built to help people take control of their professional journeys. It brings the tools people need into one place: users can create and improve CVs, explore job opportunities, find roles that match their skills, prepare tailored applications and cover letters, practise for interviews and track their job applications. I designed the whole product: a design system in light and dark, 71 desktop screens, 63 mobile screens, a dark version of every screen and nine CV and résumé templates. The goal is simple: make navigating the job market easier, more organised and more effective.",
+    result: 'A complete product design for Nelway, from job matching to application tracking, ready to build.',
     liveUrl: '',
-    client: 'Mailway (own product)',
-    role: 'Product design & development',
-    timeline: 'In progress',
-    tools: 'AI-powered web platform',
+    client: 'Nelway (own product)',
+    role: 'Product design (UI/UX)',
+    timeline: 'Design complete, ready to build',
+    tools: 'Figma',
     stack: [],
     quote: '',
     quoteAuthor: ''
