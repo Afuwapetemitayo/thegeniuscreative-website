@@ -45,6 +45,25 @@ const projects = [
     quoteAuthor: ''
   },
   {
+    slug: 'mailway',
+    name: 'Mailway',
+    kind: 'Development',
+    image: null, // add mailway.jpg to /public/images and point this at '/images/mailway.jpg'
+    problem: "Finding a job means juggling too many separate tools: one for the CV, another for job boards, another for cover letters, interview practice and tracking applications. Students, graduates and working professionals end up disorganised and unsure how to improve their chances.",
+    problemLong: "For students, recent graduates, job seekers and working professionals, the job market is scattered. The CV lives in one place, the job search in another, cover letters get rewritten from scratch every time, and applications are tracked in a notes app or not at all. There was no single, organised place to take control of a career and make smarter moves.",
+    solution: "Mailway: an AI-powered career management platform that puts the essential career tools in one place. Create and improve your CV, explore opportunities, find roles that match your skills, prepare tailored applications and cover letters, practise for interviews and track every application.",
+    solutionLong: "Mailway is an AI-powered career management platform built to help people take control of their professional journeys. It brings the tools people need into one place: users can create and improve CVs, explore job opportunities, find roles that match their skills, prepare tailored applications and cover letters, practise for interviews and track their job applications. The goal is simple: make navigating the job market easier, more organised and more effective.",
+    result: 'An AI-powered career platform that puts CVs, job matching, applications, interview practice and tracking in one place.',
+    liveUrl: '',
+    client: 'Mailway (own product)',
+    role: 'Product design & development',
+    timeline: 'In progress',
+    tools: 'AI-powered web platform',
+    stack: [],
+    quote: '',
+    quoteAuthor: ''
+  },
+  {
     slug: 'compass-oou',
     name: 'Compass OOU',
     kind: 'Development',
