@@ -16,7 +16,7 @@ export default function About() {
           <h2>Hi, I'm Temitayo.</h2>
           <p>
             According to Google, I'm "a Nigerian creative technologist, visual designer, and
-            full-stack digital product developer." Big grammar. In summary: I design your
+            full-stack digital product developer." Big grammar. In plain English: I design your
             brand, then build the website it lives on.
           </p>
           <p>
@@ -26,9 +26,12 @@ export default function About() {
             work together instead of fighting each other.
           </p>
           <p>
-            Right now I'm building <strong>Boundrix</strong>, an AI-powered scope management
-            tool for Nigerian and African freelancers, to help them shut down scope creep and
-            set clear client boundaries before a project ever starts.
+            I don't only build for clients. I'm the creator of{' '}
+            <strong>Compass OOU</strong>, the campus map students use to find their way around
+            Olabisi Onabanjo University. Right now I'm also building <strong>Boundrix</strong>,
+            an AI tool that helps Nigerian and African freelancers shut down scope creep and set
+            clear client boundaries, and <strong>Nelway</strong>, an AI career platform that
+            brings CVs, job matching, applications and interview prep into one place.
           </p>
           <div className="atags">
             <span>Brand identity</span>
