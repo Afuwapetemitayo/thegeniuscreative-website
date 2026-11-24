@@ -65,9 +65,10 @@ const projects = [
   },
   {
     slug: 'compass-oou',
+    ogImage: '/og/compass-oou.jpg', // 1200x630 picture shown when the link is shared
     name: 'Compass OOU',
     kind: 'Development',
-    image: null, // add compass-oou.jpg to /public/images and point this at '/images/compass-oou.jpg'
+    image: '/images/compass-oou.jpg',
     problem: "A university campus is hard to read when you're new to it. Students and visitors at Olabisi Onabanjo University needed a quick way to find where they were going, without asking around.",
     problemLong: "Olabisi Onabanjo University is a large campus, and anyone new to it, whether a fresh student, a visitor or someone arriving for an exam, ends up asking strangers for directions. There was no simple, dedicated map built around the way OOU students actually move around campus.",
     solution: "Compass OOU: a campus map and navigation web app for OOU, Ago-Iwoye, that works from your phone's browser, with nothing to install.",
