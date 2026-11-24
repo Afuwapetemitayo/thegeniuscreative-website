@@ -113,10 +113,24 @@ export default function CaseStudy() {
                 </blockquote>
               )}
             </div>
-            {project.liveUrl && (
-              <a className="sliveLink" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                Visit the live site <ArrowRight size={18} />
-              </a>
+            {(project.liveUrl || project.designUrl) && (
+              <div className="sactions">
+                {project.liveUrl && (
+                  <a className="sliveLink" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    Visit the live site <ArrowRight size={18} />
+                  </a>
+                )}
+                {project.designUrl && (
+                  <a
+                    className={project.liveUrl ? 'sdesignLink' : 'sliveLink'}
+                    href={project.designUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View the design <ArrowRight size={18} />
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </div>
